@@ -1,6 +1,6 @@
 FROM php:7.3.11-fpm-alpine3.10
 
-RUN apk --no-cache add nginx nodejs-current supervisor composer mysql-client git openssh-client \
+RUN apk --no-cache add nginx nodejs-current supervisor composer mysql-client git openssh-client bash \
         libzip-dev rabbitmq-c-dev libpng-dev icu-libs \
     && apk add --no-cache --virtual .build-deps zlib-dev icu-dev g++ autoconf make \
     && docker-php-ext-configure intl && docker-php-ext-configure calendar \
